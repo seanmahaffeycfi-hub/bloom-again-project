@@ -349,6 +349,26 @@ section {
   flex-shrink: 0;
 }
 
+/* Vertical variant, kept side-by-side with the horizontal one above for
+   comparison while the design is under review — not a final decision. */
+.involve-grid-vertical {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.involve-card-vertical {
+  background: var(--color-bg-alt);
+  padding: 28px;
+  border-radius: var(--radius);
+}
+.involve-card-vertical p {
+  color: var(--color-text-muted);
+}
+@media screen and (max-width: 780px) {
+  .involve-grid-vertical { grid-template-columns: 1fr; }
+}
+
 /* Gallery / slideshow --------------------------------------------------- */
 
 .gallery {
