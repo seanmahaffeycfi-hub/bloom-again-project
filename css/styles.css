@@ -187,6 +187,19 @@ section {
 .main-nav a:hover {
   color: var(--color-accent-dark);
 }
+.main-nav a.nav-cta {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+.main-nav a.nav-cta:hover {
+  background: var(--color-accent-dark);
+  color: var(--color-on-accent);
+}
+.mobile-nav a.nav-cta {
+  color: var(--color-accent-dark);
+}
 
 .nav-toggle {
   display: none;
@@ -454,6 +467,124 @@ section {
 }
 .social-links a:hover {
   color: var(--color-accent-dark);
+}
+
+/* Subpages (Photos / Updates / Donate) ------------------------------------- */
+
+.page-hero {
+  background: var(--color-bg-alt);
+  text-align: left;
+  padding: 100px 0 60px;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+}
+.page-hero .section-lead {
+  max-width: 620px;
+}
+
+.coming-soon {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+}
+
+.placeholder-card {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+}
+.placeholder-card p {
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Photos page ---------------------------------------------------------------- */
+
+.photo-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.photo-tile {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.photo-tile img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.photo-tile.is-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
+  box-shadow: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  text-align: center;
+  padding: 24px;
+}
+@media screen and (max-width: 780px) {
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 480px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* Updates page ---------------------------------------------------------------- */
+
+.updates-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.update-card {
+  background: var(--color-bg-alt);
+  padding: 28px;
+  border-radius: var(--radius);
+}
+.update-card .update-date {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.update-card p {
+  color: var(--color-text-muted);
+}
+@media screen and (max-width: 780px) {
+  .updates-grid { grid-template-columns: 1fr; }
+}
+
+/* Donate page ------------------------------------------------------------------ */
+
+.donate-options {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media screen and (max-width: 780px) {
+  .donate-options { grid-template-columns: 1fr; }
 }
 
 /* Footer --------------------------------------------------------------------- */
